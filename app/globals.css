@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+
+  background-color: #303030;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  .abc{
+
+    background-color:#032541;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 9999;
+    /* border-radius: 10px; */
+    /* border: 2px solid #fff; */
+    /* background-color: #303030; */
+    color: #fff;
+  }
+/* 
+  .cir{
+
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+  } */
+
+/* Add this CSS to your component's stylesheet */
+/* Add this CSS to your component's stylesheet */
+/* Add this CSS to your component's stylesheet */
+.trending-card-scroll-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-image: url(https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg);
+  background-size: cover;
+  background-position: center;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .trending-card-scroll-container{
+
+    flex-direction: column;
+    background-image: none;
+    
+    
+    
+  }
+  .trending-card-scroll{
+
+    flex-direction: column;
+  }
+
+}
+
+
+.trending-card-scroll {
+  display: flex;
+  gap: 50px;
+  overflow-x: auto;
+  /* -ms-overflow-style: none; */
+  scrollbar-width: none;
+  padding-bottom: 10px;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.trending-card-scroll::-webkit-scrollbar {
+  display: none; 
+}
+
+.trending-card {
+  width: 250px; 
+  flex: 0 0 auto;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* transition: transform 0.3s ease-in-out; */
+}
+/* 
+.trending-card:hover {
+  transform: scale(1.05);
+} */
+
+.trending-card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.trending-card-info {
+  padding: 10px;
+}
+
+.trending-card-title {
+  font-size: 1vw;
+  font-weight: 500;
+
+}
+
+.trending-card-rating {
+  background-color:#000;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.trending-card-release {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.scroll-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  /* user-select: none; */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.scroll-icon:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0 8px 8px 0;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 8px 0 0 8px;
+}
+
+
+.movie-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+
+}
+
+
+.card-content {
+  display: flex;
+}
+
+.card-image {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.card-details {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.card-overview {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Position the card at the top 20% of the screen */
+.movie-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.src{
+
+  border-radius:100px;
+  position: absolute;
+  right: 8%;
+
+
+}
+
+.search{
+
+  margin-right: 100px;
+  width: 25%;
+  outline: none;
+}
